@@ -42,28 +42,18 @@ body {
   z-index: -1;
 }
 
-.boxTres, .boxTres a {
-  text-align: center;
+/** modal **/
+.modal-title {
+  color: black;
 }
 
-.boxTres ul {
-  list-style: none;
+.modal-body {
+  color: black;
 }
 
-.boxTres a {
-  text-decoration: none;
-  text-transform: uppercase;
-  background: #d63031;
-  color: #fff;
-}
-
-.container-fluid {
-  background-color: rgba(0, 0, 255, 0.1);
-}
-
-.container-md, .box {
-  background: #222222;
-  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.3);
+/** servicios **/
+.cont {
+  background-image: linear-gradient(to top right, #B066FE, #63E2FF);
 }
 
 .uno:hover {
@@ -71,8 +61,14 @@ body {
   transition: all 200ms ease-in-out;
 }
 
-.cont {
-  background-image: linear-gradient(to top right, #B066FE, #63E2FF);
+.dos:hover {
+  transform: scale(1.1);
+  transition: all 200ms ease-in-out;
+}
+
+.tres:hover {
+  transform: scale(1.1);
+  transition: all 200ms ease-in-out;
 }
 
 .MyTexts {
@@ -99,14 +95,46 @@ body {
   }
 }
 
-.dos:hover {
-  transform: scale(1.1);
-  transition: all 200ms ease-in-out;
+/** quienes somos **/
+.boxTres, .boxTres a {
+  text-align: center;
 }
 
-.tres:hover {
-  transform: scale(1.1);
-  transition: all 200ms ease-in-out;
+.boxTres ul {
+  list-style: none;
+}
+
+.boxTres a {
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #d63031;
+  color: #fff;
+}
+
+.container {
+  height: auto;
+}
+
+@media all and (min-width: 1200px) {
+  .container .row {
+    height: 100px;
+  }
+}
+
+.container-fluid {
+  background-color: rgba(0, 0, 255, 0.1);
+}
+
+/** capacitaciones **/
+#container-fluid {
+  background-color: pink;
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.3);
+}
+
+/** Contacto **/
+.container-md, .box {
+  background: #222222;
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.3);
 }
 
 .font-weight-light {
@@ -133,22 +161,7 @@ body {
   font-weight: 800;
 }
 
-.container {
-  height: auto;
-}
-
-@media all and (min-width: 1200px) {
-  .container .row {
-    height: 100px;
-  }
-}
-
 .box {
   height: 100%;
   width: 100%;
-}
-
-#container-fluid {
-  background-color: pink;
-  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.3);
 }

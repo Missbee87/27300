@@ -38,36 +38,30 @@ body {
   z-index: -1;
   }
 }
-.boxTres {
-  text-align: center;
-  ul {
-  list-style: none;
+/** modal **/
+.modal-title {
+  color: black;
 }
-  a {
-  @extend .boxTres;
-  text-decoration: none;
-  text-transform: uppercase;
-  background: #d63031;
-  color: $mainColor;
+.modal-body{
+  color: black;
 }
-}
-.container-fluid {
-  background-color: rgba(0,0,255,.1);
-}
-
-
-.container-md {
-	background: #222222;
-	box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
-}
-.uno:hover{
-
-	transform: scale(1.1);
-	transition: all 200ms ease-in-out;
-}
+/** servicios **/
 .cont {
   background-image: linear-gradient(to top right, #B066FE, #63E2FF);
-  
+}
+.uno:hover{
+  transform: scale(1.1);
+  transition: all 200ms ease-in-out;
+}
+.dos {
+  &:hover{
+  transform: scale(1.1);
+  transition: all 200ms ease-in-out;
+}
+}
+.tres:hover{
+  transform: scale(1.1);
+  transition: all 200ms ease-in-out;
 }
 .MyTexts {
   font-size: 1.25rem;
@@ -84,46 +78,55 @@ body {
   @media all and (max-width: $point-md) {
   font-size: 1.5rem;
     }
-
 }
 
-.dos {
-  &:hover{
-  transform: scale(1.1);
-  transition: all 200ms ease-in-out;
+/** quienes somos **/
+.boxTres {
+  text-align: center;
+  ul {
+  list-style: none;
+}
+  a {
+  @extend .boxTres;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #d63031;
+  color: $mainColor;
+}
+}
+.container{
+  height: auto;
+  .row{
+    @media all and (min-width: $point-xl){
+      height: 100px;
+    }
+  }
+}
+.container-fluid {
+  background-color: rgba(0,0,255,.1);
+}
+.box{
+  @extend .container-md;
+  @include sizes(100%, 100%);
 }
 
+/** capacitaciones **/
+#container-fluid{
+  background-color: pink;
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
 }
-
-
-.tres:hover{
-	transform: scale(1.1);
-	transition: all 200ms ease-in-out;
+/** Contacto **/
+.container-md {
+  background: #222222;
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
 }
-
-
 @each $k, $v in $miMap{
   .font-weight-#{$k}{
     font-weight: $v;
   }
 }
-.container{
-	height: auto;
-	.row{
-		@media all and (min-width: $point-xl){
-			height: 100px;
-		}
-	}
-}
+
 @mixin sizes($widht,$height){
   height: $height;
   width: $widht;
-}
-.box{
-	@extend .container-md;
-  @include sizes(100%, 100%);
-}
-#container-fluid{
-  background-color: pink;
-  box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
 }
